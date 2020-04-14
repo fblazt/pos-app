@@ -8,11 +8,7 @@
           <MenuCard v-for="item in 64" :key="item.id"/>
         </section>
         <section class="w-3/12">
-          <div class="flex flex-col justify-center items-center">
-            <img src="@/assets/img/food-and-restaurant.png" alt="Empty cart" class="w-64 h-64">
-            <p class="text-xl font-semibold">Your cart is empty</p>
-            <p class="text-sm text-gray-500">Please add some item from the menu</p>
-          </div>
+          <EmptyCart/>
           <button @click="$refs.modal.show()">btn</button>
           <t-modal ref="modal" class="flex flex-col">
             <h1 class="text-2xl font-semibold">Add Item</h1>
@@ -58,6 +54,7 @@
 import Navbar from '@/components/modules/Navbar.vue';
 import Sidebar from '@/components/modules/Sidebar.vue';
 import MenuCard from '@/components/modules/Card.vue';
+import EmptyCart from '@/components/modules/EmptyCart.vue';
 
 export default {
   name: 'Home',
@@ -65,6 +62,7 @@ export default {
     Navbar,
     Sidebar,
     MenuCard,
+    EmptyCart,
   },
 };
 </script>
