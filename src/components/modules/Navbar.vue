@@ -1,5 +1,5 @@
 <template>
-  <nav class="w-full flex flex-row justify-between items-center shadow-2xl">
+  <nav class="w-full flex flex-row justify-between items-center shadow-md">
     <button class="mx-6"><i class="fas fa-bars fa-2x"></i></button>
     <h1 class="text-4xl text-center font-semibold">Food Items</h1>
     <span>
