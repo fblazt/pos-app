@@ -8,8 +8,19 @@
           <MenuCard v-for="item in 64" :key="item.id"/>
         </section>
         <section class="w-3/12">
-          <EmptyCart class="hidden"/>
+          <!-- <EmptyCart/> -->
           <CartItem v-for="item in 3" :key="item.id"/>
+          <div class="mx-5">
+            <div>
+              <div class="flex flex-row justify-between">
+                <p class="text-xl font-bold">Total:</p>
+                <p class="text-xl font-bold">Rp. 30.000*</p>
+              </div>
+              <p>*Belum termasuk ppn</p>
+            </div>
+            <button class="w-full mt-3 py-1 bg-teal-400 text-2xl text-white">Checkout</button>
+            <button class="w-full mt-3 py-1 bg-pink-500 text-2xl text-white">Cancel</button>
+          </div>
           <button @click="$refs.modal.show()">btn</button>
           <t-modal ref="modal" class="flex flex-col">
             <h1 class="text-2xl font-semibold">Add Item</h1>
@@ -55,7 +66,7 @@
 import Navbar from '@/components/modules/Navbar.vue';
 import Sidebar from '@/components/modules/Sidebar.vue';
 import MenuCard from '@/components/modules/Card.vue';
-import EmptyCart from '@/components/modules/EmptyCart.vue';
+// import EmptyCart from '@/components/modules/EmptyCart.vue';
 import CartItem from '@/components/modules/CartItem.vue';
 
 export default {
@@ -64,7 +75,7 @@ export default {
     Navbar,
     Sidebar,
     MenuCard,
-    EmptyCart,
+    // EmptyCart,
     CartItem,
   },
 };
