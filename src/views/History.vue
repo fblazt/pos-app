@@ -7,7 +7,7 @@
         <section class="h-full w-full flex flex-row flex-wrap justify-evenly">
           <HistoryCard v-for="item in 3" :key="item.id"/>
         </section>
-        <HistoryTable/>
+        <HistoryTable class="mt-5"/>
       </main>
     </div>
   </div>
