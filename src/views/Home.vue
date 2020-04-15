@@ -5,23 +5,15 @@
       <Sidebar/>
       <main class="h-full w-full flex flex-row">
         <section class="w-9/12 flex flex-row flex-wrap justify-center bg-gray-300">
-          <MenuCard v-for="item in 64" :key="item.id"/>
+          <MenuCard v-for="item in 10" :key="item.id"/>
         </section>
-        <section class="w-3/12">
-          <!-- <EmptyCart/> -->
-          <CartItem v-for="item in 3" :key="item.id"/>
-          <div class="mx-5">
-            <div>
-              <div class="flex flex-row justify-between">
-                <p class="text-xl font-bold">Total:</p>
-                <p class="text-xl font-bold">Rp. 30.000*</p>
-              </div>
-              <p>*Belum termasuk ppn</p>
-            </div>
-            <button class="w-full mt-3 py-1 bg-teal-400 text-2xl text-white">Checkout</button>
-            <button class="w-full mt-3 py-1 bg-pink-500 text-2xl text-white">Cancel</button>
+        <section class="h-screen w-3/12 flex flex-col justify-between">
+          <EmptyCart class="hidden"/>
+          <div>
+            <CartItem v-for="item in 3" :key="item.id"/>
           </div>
-          <button @click="$refs.modal.show()">btn</button>
+          <CartFooter/>
+          <!-- <button @click="$refs.modal.show()">btn</button>
           <t-modal ref="modal" class="flex flex-col">
             <h1 class="text-2xl font-semibold">Add Item</h1>
             <form action="" class="mt-8">
@@ -50,11 +42,12 @@
               </div>
             </form>
             <div class="flex flex-row justify-end mt-16">
-              <button class="w-24 py-1 bg-pink-500 text-white text-xl rounded-lg mr-3">
+              <button @click="$refs.modal.hide()"
+              class="w-24 py-1 bg-pink-500 text-white text-xl rounded-lg mr-3">
                 Cancel</button>
               <button class="w-24 py-1 bg-teal-400 text-white text-xl rounded-lg">Add</button>
             </div>
-          </t-modal>
+          </t-modal> -->
         </section>
       </main>
     </div>
@@ -68,6 +61,7 @@ import Sidebar from '@/components/modules/Sidebar.vue';
 import MenuCard from '@/components/modules/Card.vue';
 // import EmptyCart from '@/components/modules/EmptyCart.vue';
 import CartItem from '@/components/modules/CartItem.vue';
+import CartFooter from '@/components/modules/CartFooter.vue';
 
 export default {
   name: 'Home',
@@ -77,6 +71,7 @@ export default {
     MenuCard,
     // EmptyCart,
     CartItem,
+    CartFooter,
   },
 };
 </script>
