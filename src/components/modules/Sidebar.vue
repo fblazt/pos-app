@@ -1,6 +1,6 @@
 <template>
   <aside class="h-full w-20 bg-white flex flex-col items-center">
-    <router-link class="my-5 hover:text-green-400" to="/history">
+    <router-link class="my-5 hover:text-green-400" to="/">
       <i class="fas fa-utensils fa-2x"></i>
     </router-link>
     <router-link class="my-5 hover:text-green-400" to="/history">
