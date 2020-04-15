@@ -9,16 +9,15 @@
     <button @click="$refs.modal.show()" class="my-5 hover:text-green-400">
       <i class="fas fa-plus fa-2x"></i>
     </button>
-    <t-modal ref="modal" class="flex flex-col">
+    <t-modal ref="modal" class="flex flex-col justify-center items-center">
       <h1 class="text-2xl font-semibold">Add Item</h1>
       <form id="form" action="" class="mt-8">
         <div class="w-full flex flex-row justify-between my-3">
           <label for="name" class="w-1/5 text-xl font-semibold">Name</label>
-          <div>
+          <!-- <div> -->
             <input type="text" name="name" id="name" v-model="name"
             class="w-3/5 h-12 border border-solid border-2 rounded-md shadow-md">
-            <span v-if="submitted && !$v.name.required" class="text-red-500">Fuck u</span>
-          </div>
+          <!-- </div> -->
         </div>
         <div class="w-full flex flex-row justify-between my-3">
           <label for="image" class="w-1/5 text-xl font-semibold">Image</label>
