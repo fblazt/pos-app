@@ -8,7 +8,8 @@
           <MenuCard v-for="item in 64" :key="item.id"/>
         </section>
         <section class="w-3/12">
-          <EmptyCart/>
+          <EmptyCart class="hidden"/>
+          <CartItem v-for="item in 3" :key="item.id"/>
           <button @click="$refs.modal.show()">btn</button>
           <t-modal ref="modal" class="flex flex-col">
             <h1 class="text-2xl font-semibold">Add Item</h1>
@@ -55,6 +56,7 @@ import Navbar from '@/components/modules/Navbar.vue';
 import Sidebar from '@/components/modules/Sidebar.vue';
 import MenuCard from '@/components/modules/Card.vue';
 import EmptyCart from '@/components/modules/EmptyCart.vue';
+import CartItem from '@/components/modules/CartItem.vue';
 
 export default {
   name: 'Home',
@@ -63,6 +65,7 @@ export default {
     Sidebar,
     MenuCard,
     EmptyCart,
+    CartItem,
   },
 };
 </script>
