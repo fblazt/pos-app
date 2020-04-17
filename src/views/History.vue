@@ -3,7 +3,7 @@
     <Navbar/>
     <div class="h-full flex flex-row">
       <Sidebar/>
-      <main class="h-full w-full m-6 flex flex-col justify-center items-center">
+      <main class="h-full w-full ml-16 my-32 flex flex-col justify-center items-center">
         <section class="h-full w-full flex flex-row flex-wrap justify-evenly">
           <HistoryCard v-for="item in 3" :key="item.id"/>
         </section>
@@ -15,7 +15,7 @@
             </button>
           </header>
           <main>
-            <HistoryChart/>
+            <!-- <HistoryChart/> -->
           </main>
         </section>
         <HistoryTable class="mt-5"/>
@@ -25,12 +25,12 @@
 </template>
 
 <script>
-import { line } from 'vue-chartjs';
+import { Line } from 'vue-chartjs';
 
 import Navbar from '@/components/modules/Navbar.vue';
 import Sidebar from '@/components/modules/Sidebar.vue';
 import HistoryCard from '@/components/modules/HistoryCard.vue';
-import HistoryChart from '@/components/modules/HistoryChart.vue';
+// import HistoryChart from '@/components/modules/HistoryChart.vue';
 import HistoryTable from '@/components/modules/HistoryTable.vue';
 
 export default {
@@ -39,10 +39,10 @@ export default {
     Navbar,
     Sidebar,
     HistoryCard,
-    HistoryChart,
+    // HistoryChart,
     HistoryTable,
   },
-  extends: line,
+  extends: Line,
   props: ['chartdata', 'options'],
   mounted() {
     this.renderChart(this.chartdata, this.options);

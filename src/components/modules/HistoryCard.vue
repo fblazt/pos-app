@@ -1,5 +1,5 @@
 <template>
-  <div class="h-40 w-3/12 px-20 bg-pink-200 rounded-lg shadow-lg">
+  <div class="h-40 w-3/12 px-6 bg-pink-200 rounded-lg shadow-lg">
     <div class="m-8 flex flex-col justify-center">
       <p class="font-semibold">Today's Income</p>
       <p class="my-1 text-2xl font-bold">Rp. 1.000.000</p>
