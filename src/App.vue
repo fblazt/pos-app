@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="h-full w-full m-0 p-0">
     <router-view/>
   </div>
 </template>
@@ -12,8 +12,4 @@
 #app {
   font-family: AirBnb, 'Lucida Sans', 'Lucida Sans Regular',
   'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
 }
