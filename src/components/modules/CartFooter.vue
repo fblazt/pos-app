@@ -1,7 +1,7 @@
 <template>
   <div class="mx-5">
-    <div>
-      <div class="flex flex-row justify-between">
+    <div class="w-full">
+      <div class="w-full flex flex-row justify-between">
         <p class="text-xl font-bold">Total:</p>
         <p class="text-xl font-bold">Rp. 30.000*</p>
       </div>

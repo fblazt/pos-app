@@ -1,5 +1,5 @@
 <template>
-  <aside class="h-full w-20 bg-white flex flex-col items-center">
+  <aside class="h-full w-20 z-0 pt-16 fixed bg-white flex flex-col items-center shadow-lg">
     <router-link class="my-5 hover:text-green-400" to="/">
       <i class="fas fa-utensils fa-2x"></i>
     </router-link>
@@ -9,7 +9,7 @@
     <button @click="$refs.modal.show()" class="my-5 hover:text-green-400">
       <i class="fas fa-plus fa-2x"></i>
     </button>
-    <t-modal ref="modal" class="flex flex-col justify-center items-center">
+    <t-modal ref="modal" class="z-50 flex flex-col justify-center items-center">
       <h1 class="text-2xl font-semibold">Add Item</h1>
       <form id="form" action="" class="mt-8">
         <div class="w-full flex flex-row justify-between my-3">

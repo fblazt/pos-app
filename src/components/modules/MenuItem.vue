@@ -1,13 +1,13 @@
 <template>
-  <div class="h-48 w-56 m-5">
+  <div class="h-48 w-56 m-5 rounded-t-xl">
     <div>
       <img
         src="https://media3.s-nbcnews.com/j/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p_67dfb6820f7d3898b5486975903c2e51.fit-760w.jpg"
         alt="Menu items"
-        class="object-cover rounded-t-xl"
+        class="object-cover rounded-t-lg opacity-75 hover:opacity-100 focus:opacity-100"
       />
     </div>
-    <div>
+    <div class="border-b border-gray-500">
       <p class="font-semibold">Dalgona Coffee</p>
       <p class="font-bold">Rp. 10.000</p>
     </div>
