@@ -9,7 +9,7 @@
     </div>
     <button @click="$refs.modal.show()"
     class="w-full mt-3 py-1 bg-teal-400 text-2xl text-white">Checkout</button>
-    <t-modal ref="modal" class="flex flex-col">
+    <t-modal ref="modal" class="flex flex-col justify-center items-center">
       <header class="mt-5 flex flex-row justify-between">
         <div>
           <h1 class="text-xl font-semibold">Checkout</h1>
