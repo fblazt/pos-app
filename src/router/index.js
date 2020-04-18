@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import NotFound from '../views/NotFound.vue';
 import Login from '../views/auth/Login.vue';
 import Home from '../views/Home.vue';
 import History from '../views/History.vue';
@@ -21,6 +22,10 @@ const routes = [
     path: '/history',
     name: 'History',
     component: History,
+  },
+  {
+    path: '*',
+    component: NotFound,
   },
 ];
 
