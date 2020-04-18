@@ -1,22 +1,35 @@
 <template>
-  <div class="h-48 w-56 m-5 rounded-t-xl">
-    <div>
-      <img
-        src="https://media3.s-nbcnews.com/j/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p_67dfb6820f7d3898b5486975903c2e51.fit-760w.jpg"
-        alt="Menu items"
-        class="object-cover rounded-t-lg opacity-75 hover:opacity-100 focus:opacity-100"
-      />
-    </div>
-    <div class="border-b border-gray-500">
-      <p class="font-semibold">Dalgona Coffee</p>
-      <p class="font-bold">Rp. 10.000</p>
+  <div class="mx-16 flex flex-row flex-wrap">
+    <div v-for="item in menu" :key="item.id" class="h-56 w-64 m-5 rounded-t-xl">
+      <div class="">
+        <img
+          :src="item.image"
+          alt="Menu items"
+          class="h-48 w-64 object-cover rounded-t-lg
+          opacity-75"
+        />
+      </div>
+      <div class="border-b border-gray-500">
+        <p class="font-semibold">{{ item.name }}</p>
+        <p class="font-bold">Rp. {{ item.price }}</p>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
   name: 'MenuItem',
+  mounted() {
+    this.$store.dispatch('allMenu');
+  },
+  computed: {
+    ...mapState([
+      'menu',
+    ]),
+  },
 };
 </script>
 
