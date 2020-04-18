@@ -6,7 +6,8 @@ import router from './router';
 import store from './store';
 import '@/assets/css/tailwind.css';
 
-Vue.use(TModal, Vuelidate);
+Vue.use(TModal);
+Vue.use(Vuelidate);
 
 Vue.config.productionTip = false;
 
