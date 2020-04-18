@@ -7,16 +7,16 @@
       <div class="font-bold">Dalgona Coffee</div>
       <div class="w-full flex flex-row justify-between">
         <div class="flex flex-row">
-          <button class="h-8 w-8 bg-green-200 border-2
+          <button @click="decrement" class="h-8 w-8 bg-green-200 border-2
           border-green-400 text-xl text-green-400 font-bold">-</button>
           <!-- <input type="number" class="h-8 w-8 border-2
           border-green-400 text-xl text-green-400 font-bold"> -->
           <p class="h-8 w-8 border-2 border-green-400
-          text-center text-xl text-green-400 font-bold">1</p>
-          <button class="h-8 w-8 bg-green-200 border-2
+          text-center text-xl text-green-400 font-bold" >{{ count }}</p>
+          <button @click="increment" class="h-8 w-8 bg-green-200 border-2
           border-green-400 text-xl text-green-400 font-bold">+</button>
         </div>
-        <div class="font-semibold self-center">Rp. 10.000</div>
+        <div class="font-semibold self-center">Rp. {{ price }}</div>
       </div>
     </div>
   </div>
@@ -25,6 +25,26 @@
 <script>
 export default {
   name: 'CartItem',
+  data() {
+    return {
+      count: 1,
+      price: 10000,
+    };
+  },
+  methods: {
+    increment() {
+      // eslint-disable-next-line no-plusplus
+      this.count++;
+      this.price *= this.count;
+    },
+    decrement() {
+      if (this.count >= 2) {
+      // eslint-disable-next-line no-plusplus
+        this.count--;
+        this.price /= this.count;
+      }
+    },
+  },
 };
 </script>
 
