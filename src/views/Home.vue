@@ -1,17 +1,17 @@
 <template>
   <div class="h-full w-full flex flex-col">
-    <Navbar/>
+    <Navbar navTitle="Food Items" />
     <div class="h-full flex flex-row">
       <Sidebar/>
       <main class="h-full w-full mt-16 ml-12 flex flex-row">
-        <section class="w-9/12 flex flex-row flex-wrap justify-center bg-gray-300">
-          <MenuItem v-for="item in 10" :key="item.id"/>
+        <section class="h-full w-9/12 bg-gray-300">
+          <MenuItem/>
         </section>
         <section class="h-screen -mt-16 flex flex-col">
           <div class="fixed h-full w-3/12 flex flex-col justify-between">
             <EmptyCart class="hidden"/>
             <div class="mt-20 overflow-y-scroll">
-              <CartItem v-for="item in 10" :key="item.id"/>
+              <CartItem/>
             </div>
             <CartFooter class=""/>
           </div>

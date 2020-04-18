@@ -1,6 +1,6 @@
 <template>
   <div class="h-full w-full flex flex-col">
-    <Navbar/>
+    <Navbar navTitle="History"/>
     <div class="h-full flex flex-row">
       <Sidebar/>
       <main class="h-full w-full ml-16 my-32 flex flex-col justify-center items-center">
