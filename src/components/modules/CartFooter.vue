@@ -44,7 +44,7 @@
         </div>
       </footer>
     </t-modal>
-    <button class="w-full mt-3 py-1 bg-pink-500 text-2xl text-white">Cancel</button>
+    <button class="w-full mt-3 mb-3 py-1 bg-pink-500 text-2xl text-white">Cancel</button>
   </div>
 </template>
 
