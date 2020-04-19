@@ -3,18 +3,29 @@
     <div
     class="container md:w-3/4 lg:h-3/4 flex flex-row justify-center
     items-center bg-gray-100 rounded-lg shadow-2xl">
-      <div class="hidden lg:flex w-1/2">
+      <div class="hidden h-full lg:flex w-1/2">
         <img src="https://miro.medium.com/max/5188/1*yqLNlw42tsIPgGuDqIzuSw.jpeg" alt=""
-        class="object-cover h-full w-full rounded-l-lg opacity-75">
+        class="object-cover ml-10 h-full w-full rounded-lg opacity-75 shadow-lg">
       </div>
-      <div class="h-full lg:h-auto w-1/2 flex flex-col justify-center items-center">
+      <div class="w-1/2 mt-3 flex flex-col justify-center items-center">
         <header>
           <img src="@/assets/img/warung-onlen.png" alt="" class="h-32 w-32 object-cover rounded-lg">
         </header>
         <main class="w-full mt-3">
-          <form id="form" @submit.prevent="login"
+          <form id="form" @submit.prevent="register"
           class="w-full px-3 flex flex-col justify-center items-center">
-            <div class="w-full flex justify-center items-center">
+            <div class="w-full mt-3 flex justify-center items-center">
+              <input type="text" name="name" id="name" placeholder="Name"
+              v-model="name"
+              class="w-full md:w-2/3 h-12 px-5 border
+              hover:bg-gray-300 focus:outline-none rounded-full"
+              :class="$v.name.$error ? 'bg-red-200 placeholder-red-500' : 'bg-white'">
+              <div v-if="submitted && !$v.name.required"
+              class="text-red-500 font-semibold ml-1">
+                Required
+              </div>
+            </div>
+            <div class="w-full mt-3 flex justify-center items-center">
               <input type="email" name="email" id="email" placeholder="E-mail" v-model="email"
               class="w-full md:w-2/3 h-12 px-5 border
               hover:bg-gray-300 focus:outline-none rounded-full hover:placeholder-white"
@@ -35,12 +46,23 @@
                 Required
               </div>
             </div>
-            <div class="w-full mt-3 flex flex-col justify-center items-center">
-              <button form="form" @click.once="login"
+            <div class="w-full mt-3 flex justify-center items-center">
+              <input type="password" name="password2" id="password2" placeholder="Repeat password"
+              v-model="password2"
+              class="w-full md:w-2/3 h-12 px-5 border
+              hover:bg-gray-300 focus:outline-none rounded-full"
+              :class="$v.password2.$error ? 'bg-red-200 placeholder-red-500' : 'bg-white'">
+              <div v-if="submitted && !$v.password2.sameAsPassword"
+              class="text-red-500 font-semibold ml-1">
+                Must be identical
+              </div>
+            </div>
+            <div class="w-full my-3 flex flex-col justify-center items-center">
+              <button form="form" @click.once="register"
               class="w-full md:w-2/3 h-10 bg-green-600 hover:bg-green-900
               focus:bg-green-900 hover:text-white
               rounded-full text-white text-xl transform hover:scale-105 focus:outline-none">
-                Login
+                Register
               </button>
               <!-- <a href="" class="mt-3 hover:text-green-600">Karyawan baru gan?</a> -->
             </div>
@@ -55,23 +77,29 @@
 </template>
 
 <script>
-import { required, email } from 'vuelidate/lib/validators';
+import {
+  required, email, sameAs, minLength,
+} from 'vuelidate/lib/validators';
 
 export default {
   name: 'Login',
   data() {
     return {
+      name: '',
       email: '',
       password: '',
+      password2: '',
       submitted: false,
     };
   },
   validations: {
+    name: { required },
     email: { required, email },
-    password: { required },
+    password: { required, minLength: minLength(6) },
+    password2: { sameAsPassword: sameAs('password') },
   },
   methods: {
-    login(e) {
+    register(e) {
       e.preventDefault();
       this.submitted = true;
 
