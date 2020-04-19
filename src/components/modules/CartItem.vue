@@ -38,7 +38,7 @@ export default {
       this.price *= this.count;
     },
     decrement() {
-      if (this.count >= 2) {
+      if (this.count > 1) {
       // eslint-disable-next-line no-plusplus
         this.count--;
         this.price /= this.count;

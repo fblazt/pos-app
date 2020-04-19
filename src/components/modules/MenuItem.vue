@@ -1,6 +1,6 @@
 <template>
-  <div class="mx-16 flex flex-row flex-wrap">
-    <div v-for="item in menu" :key="item.id" class="h-56 w-64 m-5 rounded-t-xl">
+  <div class="mx-16 flex flex-row justify-start flex-wrap">
+    <div v-for="item in menu" :key="item.id" class="h-56 w-64 my-5 mx-10 rounded-t-xl">
       <div class="">
         <img
           :src="item.image"
@@ -9,7 +9,7 @@
           opacity-75"
         />
       </div>
-      <div class="border-b border-gray-500">
+      <div class="">
         <p class="font-semibold">{{ item.name }}</p>
         <p class="font-bold">Rp. {{ item.price }}</p>
       </div>
