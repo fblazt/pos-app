@@ -6,7 +6,8 @@
     <router-link class="my-5 hover:text-green-400" to="/history">
       <i class="fas fa-clipboard-list fa-2x"></i>
     </router-link>
-    <button @click="$refs.addModal.show()" class="my-5 hover:text-green-400">
+    <button @click="$refs.addModal.show()"
+    class="my-5 fill-current text-green-300 hover:text-green-400">
       <i class="fas fa-plus fa-2x"></i>
     </button>
     <t-modal ref="addModal" class="flex flex-col justify-center items-center">

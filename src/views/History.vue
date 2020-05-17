@@ -3,11 +3,11 @@
     <Navbar navTitle="History"/>
     <div class="h-full flex flex-row">
       <Sidebar/>
-      <main class="h-full w-full ml-16 my-32 flex flex-col justify-center items-center">
-        <section class="h-full w-full flex flex-row flex-wrap justify-evenly">
-          <HistoryCard v-for="item in 3" :key="item.id"/>
-        </section>
-        <section class="container mt-5 w-full p-5 flex flex-col rounded-lg shadow-lg">
+      <main class="h-full w-full ml-16 mt-16 flex flex-col justify-center items-center">
+        <!-- <section class="h-full w-full flex flex-row flex-wrap justify-evenly"> -->
+          <HistoryCard class="mt-48"/>
+        <!-- </section> -->
+        <section class="container mt-10 w-full p-5 flex flex-col rounded-lg shadow-lg">
           <header class="flex flex-row justify-between items-center">
             <h1 class="text-4xl font-normal">Revenue</h1>
             <button class="px-3 flex justify-center items-center bg-gray-300 rounded-full">

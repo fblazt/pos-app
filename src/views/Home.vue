@@ -35,7 +35,7 @@
           <div class="fixed h-full w-3/12 flex flex-col justify-between">
             <EmptyCart class="hidden"/>
             <div class="mt-20 overflow-y-scroll">
-              <CartItem  v-for="item in 10" :key="item.id"/>
+              <CartItem/>
             </div>
             <CartFooter class=""/>
           </div>

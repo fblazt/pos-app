@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-64">
+  <div class="small">
     <RevenueChart :chart-data="datacollection"></RevenueChart>
     <button @click="fillData()">Randomize</button>
   </div>

@@ -16,6 +16,7 @@
       </button>
       <button class="mx-5">
         <i class="fas fa-shopping-cart fa-2x"></i>
+        <span class="bg-blue-200 text-white text-xl ml-1 py-1 px-3 rounded-full">1</span>
       </button>
     </div>
   </nav>

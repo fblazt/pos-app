@@ -3,7 +3,7 @@
     <div class="w-full">
       <div class="w-full flex flex-row justify-between">
         <p class="text-xl font-bold">Total:</p>
-        <p class="text-xl font-bold">Rp. 30.000*</p>
+        <p class="text-xl font-bold">Rp. 10.000*</p>
       </div>
       <p>*Belum termasuk ppn</p>
     </div>
@@ -21,7 +21,7 @@
       </header>
       <main class="mt-10">
         <div class="h-56 w-full overflow-y-auto">
-          <div v-for="item in 4" :key="item.id"
+          <div v-for="item in 10" :key="item.id"
           class="my-3 flex flex-row justify-between font-semibold">
             <div>Dalgona Coffee</div>
             <div>Rp. 10.000</div>
