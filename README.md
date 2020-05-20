@@ -17,6 +17,7 @@
 * [Getting Started](#getting-started)
   * [Installation](#installation)
 * [Screenshots](#screenshots)
+* [Contributing](#contributing)
 * [Related Project](#related-project)
 
 
@@ -69,7 +70,20 @@ npm run serve
       <image width="400" src='./screenshots/pos-app-register.png' />
       <image width="400" src='./screenshots/pos-app-homepage.png' />
       <image width="400" src='./screenshots/pos-app-history.png' />
+    
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+Fork the Project
+1. Create your Feature Branch  ```git checkout -b [feature]```
+2. Commit your Changes ```git commit -m 'Add some feature'```
+3. Push to the Branch ```git push origin [feature]```
+4. Open a Pull Request
 
 
 ## Related Project
 * [`Pos-Backend`](https://github.com/fblazt/pos-api)
+
+---
+Copyright © 2020 [Firman](https://github.com/fblazt/)
